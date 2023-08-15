@@ -1,0 +1,13 @@
+matriz = [
+    [1,2,3],
+    [4,5,6],
+    [8,9,1],
+]
+for line in range(len(matriz)):
+    for colunm in range(len(matriz[line])): 
+        print(matriz[line][colunm],end = "")
+    print(end="\n")
+   
+    
+    
+    
