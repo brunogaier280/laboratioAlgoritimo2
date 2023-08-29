@@ -1,0 +1,15 @@
+def main():
+    person = {}
+    name = input('digite seu nome: ')
+    person['name'] = name 
+    person['age']  = int(input('digite sua idade: '))
+    person['sex'] = input('digite seu sexo:')
+    person['city'] = input('digite sua cidade:')
+    person['state'] = input('digite seu estado:')
+    
+    
+    
+    
+    print(person)
+    
+main()
