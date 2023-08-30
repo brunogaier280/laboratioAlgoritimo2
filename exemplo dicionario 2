@@ -1,0 +1,17 @@
+def main(): 
+    buy_list = {} 
+    while True: 
+        product_name = input("digite o nome do produto: " )
+        if product_name == "exit": 
+            break
+        quantity = int(input("digite a quantidade:")) 
+        if product_name in buy_list: 
+            buy_list[product_name] = buy_list[product_name] + quantity 
+        else: 
+            buy_list[product_name] = quantity 
+            
+            
+            
+    print(buy_list)
+            
+main()
