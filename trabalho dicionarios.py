@@ -3,10 +3,10 @@ vendas = []
 estoque = {}
 
 def adicionar_produto():
-    nome = input("Digite o nome do produto: ")
+    nome = input("Digite o nome do produto : ")
     quantidade = int(input("Digite a quantidade em estoque: "))
     preco = float(input("Digite o preço unitário: "))
-    
+  
     estoque[nome] = {"quantidade": quantidade, "preco": preco}
     print(f"{nome} foi adicionado ao estoque.")
 
@@ -29,15 +29,14 @@ def visualizar_produtos():
         print()
 
 def vender_produto():
-    nome = input("Digite o nome do produto vendido: ")
+    nome = input("Digite o nome do produto que foi vendido: ")
     if nome in estoque:
-        quantidade_vendida = int(input("Digite a quantidade vendida: "))
+        quantidade_vendida = int(input("Digite a quantidade do produto vendida: "))
         produto = estoque[nome]
         if quantidade_vendida <= produto['quantidade']:
             valor_total = quantidade_vendida * produto['preco']
             produto['quantidade'] -= quantidade_vendida
             print(f"{quantidade_vendida} unidades de {nome} foram vendidas por R${valor_total:.2f}.")
-            
             
             vendas.append({
                 'produto': nome,
@@ -47,9 +46,7 @@ def vender_produto():
         else:
             print(f"Quantidade insuficiente de {nome} em estoque.")
     else:
-        print(f"{nome} não encontrado no estoque.")
-
-
+        print(f"{nome}  produto não encontrado no estoque.")
 
 def relatorio_vendas():
     print("Relatório de Vendas:")
@@ -80,8 +77,8 @@ while True:
         vender_produto()
     elif opcao == '5':
         relatorio_vendas()
-    elif opcao == '6':
-        print("Encerrando o programa.")
+    elif opcao =='6':
+        print("tchauu")
         break
     else:
-        print("Opção inválida. Tente novamente.")
+        print("Opção inválida. use uma opção válida.")
