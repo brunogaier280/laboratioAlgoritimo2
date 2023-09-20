@@ -1,0 +1,11 @@
+lista = [3,8,6,9,1,4,7]
+
+for x in range(len(lista)): 
+    for y in range(len(lista)): 
+        if lista[x] < lista[y]: 
+            a = lista[x] 
+            b = lista[y]
+            lista[x] = b 
+            lista[y] = a 
+            
+    print(lista)
