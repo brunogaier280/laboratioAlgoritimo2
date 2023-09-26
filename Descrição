@@ -1,0 +1,21 @@
+Descrição do Sistema:
+O sistema em questão é um "Sistema de Gerenciamento de Estoque" desenvolvido em Python. Ele permite que os usuários realizem várias operações relacionadas ao estoque de produtos, como adicionar produtos, alterar valores, excluir produtos, registrar vendas, visualizar informações sobre produtos, gerar relatórios de vendas e visualizar produtos por categoria. O sistema oferece uma interface de linha de comando (CLI) amigável para os usuários interagirem com suas funcionalidades.
+
+Funcionalidades Principais:
+1. **Adicionar Produto**: Os usuários podem adicionar produtos ao estoque, fornecendo informações como nome, quantidade em estoque, preço unitário e categoria. Se um produto já existir, a quantidade em estoque será atualizada.
+2. **Alterar Valor de Produto**: Permite a alteração do preço unitário de um produto, refletindo apenas nas vendas futuras. Um histórico com os valores antigos não é mantido no código atual.
+3. **Excluir Produto**: Os usuários podem excluir produtos do estoque se necessário.
+4. **Histórico de Alterações**: O sistema mantém um histórico de vendas, mas não registra alterações nos valores dos produtos no estoque.
+5. **Buscar um Produto**: Os usuários podem procurar informações detalhadas sobre um produto específico, incluindo quantidade em estoque e preço unitário. Também é possível verificar o histórico de vendas desse produto.
+6. **Visualização de Produtos por Categoria**: Oferece a capacidade de listar todos os produtos pertencentes a uma categoria específica, juntamente com informações sobre quantidade em estoque e preço unitário.
+7. **Visualizar Todos os Produtos**: Exibe uma lista de todos os produtos disponíveis no estoque, incluindo suas quantidades e preços.
+8. **Vender um Produto**: Permite aos usuários registrar vendas, informando o nome do produto vendido e a quantidade vendida. A quantidade em estoque é atualizada, e o valor total da venda é calculado.
+9. **Relatório de Vendas**: Mostra um relatório que lista todas as vendas realizadas, incluindo o nome do produto, a quantidade vendida, o valor total da venda e a data da venda.
+
+Arquitetura:
+A arquitetura do sistema é bastante simples e consiste principalmente em um conjunto de funções organizadas em um único arquivo Python. Não há separação em módulos ou camadas distintas, pois é um projeto relativamente pequeno.
+- O sistema utiliza um dicionário (`estoque`) para armazenar as informações dos produtos, onde cada produto é representado por uma chave única e contém informações como quantidade, preço e categoria.
+- Um histórico de vendas é mantido em uma lista (`historico`) que armazena informações sobre cada venda, incluindo o nome do produto, a quantidade vendida, o valor total da venda e a data da venda.
+- A interface com o usuário é baseada em um loop que exibe um menu de opções na linha de comando. O usuário pode escolher uma opção digitando um número correspondente.
+- A maioria das funções interage diretamente com os dicionários `estoque` e `historico` para realizar as operações necessárias.
+- Não há uso de bancos de dados externos ou frameworks complexos neste código. O sistema é projetado para ser executado localmente na linha de comando.
