@@ -1,13 +1,13 @@
-def calculate_square_root(number):
-    if number < 0:
+def calcular_raiz(numero):
+    if numero < 0:
         raise Exception("A raiz quadrada de números negativos não é real.")
     else:
-        return number ** (1/2)
+        return numero** (1/2)
 
-# Exemplo de uso da função:
+
 try:
     num = float(input("Digite um número: "))
-    resultado = calculate_square_root(num)
+    resultado = calcular_raiz(num)
     print(f"A raiz quadrada de {num} é {resultado}")
 except Exception as e:
     print(e)
