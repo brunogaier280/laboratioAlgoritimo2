@@ -5,7 +5,6 @@ def find_element(lista, indice):
     except IndexError:
         raise IndexError("Índice inválido. O índice está fora dos limites da lista.")
 
-# Exemplo de uso da função
 minha_lista = [1, 2, 3, 4, 5]
 indice = 7
 
